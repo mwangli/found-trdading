@@ -175,6 +175,8 @@ const Welcome: React.FC = () => {
                       <span>2023-07-17</span> <br/>
                       22. 购买金额数量优化 <br/>
                       23. 排名重复数据优化 <br/>
+                      <span>2025-02-09</span> <br/>
+                      24. 系统功能异常提示 <br/>
                     </div>
                     <div style={{
                       fontSize: '14px',
