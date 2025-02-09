@@ -112,6 +112,12 @@ const Welcome: React.FC = () => {
                     Stock-Trading System是一款自动化股票交易管理软件，可以按照自定义交易策略，进行自动化的股票买卖交易, 也可以查看股票历史价格，实时价格，买卖记录和相关报表数据<br/>
                   </div>
                   <div style={{
+                    fontWeight: 'bolder',
+                    fontSize: 'large'
+                  }}>
+                    2025-02-09：目前暂时无法从ZX证券平台请求的到股票的接口数据，待后期优化<br/>
+                  </div>
+                  <div style={{
                     fontSize: '16px',
                     fontWeight: 'bold',
                     marginTop: '16px'
