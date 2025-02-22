@@ -38,6 +38,7 @@ declare namespace API {
   };
 
   type RuleListItem = {
+    selected: string;
     className: any;
     running: string;
     minRate: any;

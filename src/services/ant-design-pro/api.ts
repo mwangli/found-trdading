@@ -139,6 +139,46 @@ export async function listHistoryPrices(
   });
 }
 
+
+/** 选中自选股票 GET /api/selectStockInfo */
+export async function selectStockInfo(
+  params: {
+    code?: string;
+  },
+  // sort: object,
+  options?: { [key: string]: any },
+) {
+  return request<any>('/api/stockInfo/selectStockInfo', {
+    method: 'GET',
+    params: {
+      ...params,
+      // sortKey: sort ? Object.keys(sort)[0] : '',
+      // sortOrder: sort ? Object.values(sort)[0] : '',
+    },
+    ...(options || {}),
+  });
+}
+
+
+/** 取消自选股票 GET /api/cancelStockInfo */
+export async function cancelStockInfo(
+  params: {
+    code?: string;
+  },
+  // sort: object,
+  options?: { [key: string]: any },
+) {
+  return request<any>('/api/stockInfo/cancelStockInfo', {
+    method: 'GET',
+    params: {
+      ...params,
+      // sortKey: sort ? Object.keys(sort)[0] : '',
+      // sortOrder: sort ? Object.values(sort)[0] : '',
+    },
+    ...(options || {}),
+  });
+}
+
 /** 获取历史价格 GET /api/listHistoryPrices */
 export async function listIncreaseRate(
   params: {

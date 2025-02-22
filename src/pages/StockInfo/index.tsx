@@ -1,4 +1,4 @@
-import {listHistoryPrices, listStockInfo} from '@/services/ant-design-pro/api';
+import {cancelStockInfo, listHistoryPrices, listStockInfo, selectStockInfo} from '@/services/ant-design-pro/api';
 import type {ActionType, ProColumns} from '@ant-design/pro-components';
 import {PageContainer, ProTable,} from '@ant-design/pro-components';
 import {FormattedMessage, useIntl} from '@umijs/max';
@@ -116,6 +116,19 @@ const TableList: React.FC = () => {
       },
     },
     {
+      title: '自选股票',
+      dataIndex: 'selected',
+      sorter: true,
+      valueEnum: {
+        "1": {
+          text: '选中股票',
+        },
+        "0": {
+          text: '未选股票',
+        },
+      },
+    },
+    {
       title: <FormattedMessage id="pages.searchTable.permission" defaultMessage="交易权限"/>,
       dataIndex: 'permission',
       sorter: true,
@@ -151,12 +164,12 @@ const TableList: React.FC = () => {
     //   hideInTable: true,
     // },
     {
-      title: '数据查看',
+      title: '相关操作',
       dataIndex: 'option',
       valueType: 'option',
       render: (_, record) => [
         <a
-          key="config"
+          key="listHistoryPrices"
           onClick={() => {
             listHistoryPrices({code: record.code}).then(res => {
               record.pricesList = res?.data?.points
@@ -168,6 +181,21 @@ const TableList: React.FC = () => {
           }}
         >
           历史价格
+        </a>,
+        <a
+          key="k2"
+          onClick={async (_) => {
+            setCurrentRow(record);
+            if (record.selected == "1") {
+              await cancelStockInfo(record)
+            } else {
+              await selectStockInfo(record)
+            }
+            actionRef?.current?.reload()
+          }}
+        >{
+          record.selected == "1" ? "取消自选" : "添加自选"
+        }
         </a>,
       ],
     },
