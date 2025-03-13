@@ -125,24 +125,24 @@ const TableList: React.FC = () => {
           }
           }
         >
-          测试集
+          测试数据
         </a>,
 
-        <a
-          key="k3"
-          onClick={async (_) => {
-            listValidateData({code: record.code}).then(res => {
-              record.pricesList = res?.data?.points
-              record.maxPrice = res?.data?.maxValue
-              record.minPrice = res?.data?.minValue
-              setCurrentRow(record);
-              setModalOpen(true);
-            })
-          }
-          }
-        >
-          验证集
-        </a>,
+        // <a
+        //   key="k3"
+        //   onClick={async (_) => {
+        //     listValidateData({code: record.code}).then(res => {
+        //       record.pricesList = res?.data?.points
+        //       record.maxPrice = res?.data?.maxValue
+        //       record.minPrice = res?.data?.minValue
+        //       setCurrentRow(record);
+        //       setModalOpen(true);
+        //     })
+        //   }
+        //   }
+        // >
+        //   验证集
+        // </a>,
       ],
     }
   ];

@@ -115,7 +115,7 @@ const Welcome: React.FC = () => {
                     fontWeight: 'bolder',
                     fontSize: 'large'
                   }}>
-                    2025-02-09：目前暂时无法从ZX证券平台请求的到股票的接口数据，待后期优化<br/>
+                    2025-03-13：目前暂时无法使用滑块验证码登录，待后期优化<br/>
                   </div>
                   <div style={{
                     fontSize: '16px',
@@ -177,6 +177,10 @@ const Welcome: React.FC = () => {
                       23. 排名重复数据优化 <br/>
                       <span>2025-02-09</span> <br/>
                       24. 系统功能异常提示 <br/>
+                      <span>2024-04-8</span> <br/>
+                      22. 后台项目整体框架优化<br/>
+                      23. 使用LSTM模型预测价格 <br/>
+                      <span>2024-04-11</span> <br/>
                     </div>
                     <div style={{
                       fontSize: '14px',
@@ -186,10 +190,6 @@ const Welcome: React.FC = () => {
                       marginBottom: 32,
                       width: '40%',
                     }}>
-                      <span>2024-04-8</span> <br/>
-                      22. 后台项目整体框架优化<br/>
-                      23. 使用LSTM模型预测价格 <br/>
-                      <span>2024-04-11</span> <br/>
                       24. 增加订单查询页面 <br/>
                       <span>2024-04-12</span> <br/>
                       25. 优化欢迎页面补充文档 <br/>
